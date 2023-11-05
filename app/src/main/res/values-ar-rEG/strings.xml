@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">كورسات</string>
+    <string name="home">الرئيسية</string>
+    <string name="teacher_name">اسم المدرس</string>
+    <string name="students">الطلاب</string>
+    <string name="folders">مجلدات</string>
+    <string name="chat">دردشة</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="success">تم الحفظ بنجاح </string>
+    <string name="fail">فشل الحفظ</string>
+    <string name="errorLogin"> الرقم السري خاطئ</string>
+    <string name="addStudent">اضافة طالب جديد</string>
+    <string name="name">الاسم</string>
+    <string name="subject" >المادة</string>
+    <string name="videoNo">  الفيدوهات المسموح بها</string>
+    <string name="password">الرقم السري</string>
+    <string name="phoneNo">رقم التليفون</string>
+    <string name="user">اسم المستخدم</string>
+    <string name="save">حفظ</string>
+    <string name="enterValu">ادخل اسم الفيديو</string>
+    <string name="documents" >مستندات</string>
+    <string name="videos">فيديو</string>
+    <string name="failuer">لم يتم الحفظ تأكد من وجود شبكة </string>
+    <string name="existstudent">هذاالكود موجود بالفعل</string>
+    <string name="delet">تم حذف </string>
+    <string name="link">رابط الفيديو</string>
+    <string name="upload">رفع</string>
+    <string name="code">كود</string>
+    <string name="type">اكتب رسالة </string>
+    <string name="incorrectLink">هذا الرابط غير صحيح </string>
+    <string name="errorusename">اسم المستخدم خاطئ</string>
+
+</resources>

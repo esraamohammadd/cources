@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/students"
+        android:icon="@drawable/group"
+        android:title="@string/students" />
+    <item
+        android:id="@+id/folders"
+        android:icon="@drawable/folder"
+        android:title="@string/folders" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/logout" />
+</menu>

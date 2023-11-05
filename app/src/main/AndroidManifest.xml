@@ -3,19 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cources">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/iconproject"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cources"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".student.VideosActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".ui.ShowVideo"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.admin.SpinnerActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ui.admin.AddStudent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.SubjectContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.AddFolder"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.Home"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ui.admin.students"
+            android:exported="false" />
+        <activity
+            android:name=".student.ui.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

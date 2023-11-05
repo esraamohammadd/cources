@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "670416974022",
+    "firebase_url": "https://cources-4c33e-default-rtdb.firebaseio.com",
+    "project_id": "cources-4c33e",
+    "storage_bucket": "cources-4c33e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670416974022:android:8d0ded8ba2efea0f2ea7c7",
+        "android_client_info": {
+          "package_name": "com.example.cources"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670416974022-ue9ie23i4bp4i2v0difg15i7jc2pitps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRN5Lfwu_kj5yFD_3GILLJNjWJtyGAxrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670416974022-ue9ie23i4bp4i2v0difg15i7jc2pitps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

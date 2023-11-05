@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/documents"
+        android:icon="@drawable/doc"
+        android:title="@string/documents"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/videoes"
+        android:icon="@drawable/video"
+        android:title="@string/videos"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/chat"
+        android:title="@string/chat"
+        app:showAsAction="always|withText" />
+</menu>

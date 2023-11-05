@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Cources</string>
+    <string name="nav_open" translatable="false">open</string>
+    <string name="home">home</string>
+    <string name="teacher_name">Teacher Name</string>
+    <string name="students">students</string>
+    <string name="folders">folders</string>
+    <string name="chat">chat</string>
+    <string name="logout">LogOut</string>
+    <string name="nav_close" translatable="false">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="success">successfully uploaded</string>
+    <string name="fail">failed to save</string>
+    <string name="errorLogin">password is error</string>
+    <string name="addStudent">add new student</string>
+    <string name="name">name</string>
+    <string name="subject"> subject</string>
+    <string name="videoNo">allowed videos</string>
+    <string name="password">password</string>
+    <string name="phoneNo">phone Number</string>
+    <string name="user">User Name</string>
+    <string name="save">save</string>
+    <string name="enterValu">enter value name</string>
+    <string name="documents">videos</string>
+    <string name="videos">videos</string>
+    <string name="failuer">an Error occure try again</string>
+    <string name="existstudent">this code already exist</string>
+    <string name="delet">is deleted</string>
+    <string name="link">link</string>
+    <string name="upload">upload</string>
+    <string name="code">code</string>
+    <string name="type">type message</string>
+    <string name="incorrectLink">link is incorrect</string>
+    <string name="errorusename">user name is incorrect</string>
+
+
 </resources>
