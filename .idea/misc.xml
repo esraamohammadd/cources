@@ -23,6 +23,7 @@
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_show_video.xml" value="0.1" />
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_spinner.xml" value="0.20416666666666666" />
+        <entry key="..\:/Cources3/app/src/main/res/layout/activity_student_home.xml" value="0.19947916666666668" />
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_students.xml" value="0.16168478260869565" />
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_subject_content.xml" value="0.20416666666666666" />
         <entry key="..\:/Cources3/app/src/main/res/layout/activity_videos.xml" value="0.20416666666666666" />
@@ -47,7 +48,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

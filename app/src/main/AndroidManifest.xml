@@ -17,17 +17,20 @@
         android:theme="@style/Theme.Cources"
         tools:targetApi="31">
         <activity
-            android:name=".student.VideosActivity"
-            android:exported="true" >
+            android:name=".student.ui.StudentHome"
+            android:exported="true">
 
         </activity>
+        <activity
+            android:name=".student.VideosActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".ui.ShowVideo"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".ui.admin.SpinnerActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ui.admin.AddStudent"
             android:exported="false" />
@@ -39,15 +42,13 @@
             android:exported="false" />
         <activity
             android:name=".ui.admin.Home"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ui.admin.students"
             android:exported="false" />
         <activity
             android:name=".student.ui.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

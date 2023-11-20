@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (password.equals(pasword))
                     {
-                        Intent intent = new Intent(MainActivity.this, VideosActivity.class);
+                        Intent intent = new Intent(MainActivity.this, StudentHome.class);
                         intent.putExtra(ARG_USERNAME,userName);
                         intent.putExtra(ARG_PHONE,phone);
                         intent.putExtra(ARG_NAME,name);
