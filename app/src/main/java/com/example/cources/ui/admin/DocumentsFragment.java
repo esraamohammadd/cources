@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.example.cources.R;
 import com.example.cources.adapter.Document_Adapter;
+import com.example.cources.classes.Student_Level;
 import com.example.cources.pojo.DocumentModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -128,7 +129,12 @@ public class DocumentsFragment extends Fragment {
 
 
             }
-        });
+
+             @Override
+             public void onIteemClick(int position) {
+                 startActivity(new Intent(getActivity(), Student_Level.class));
+             }
+         });
        recyclerView.setAdapter(document_adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 

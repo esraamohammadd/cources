@@ -1,6 +1,7 @@
 package com.example.cources.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cources.R;
+import com.example.cources.classes.Student_Level;
+import com.example.cources.interfaces.Listeners;
+import com.example.cources.pojo.StudentLevel;
 import com.example.cources.pojo.StudentModel;
+import com.example.cources.ui.admin.StudentsFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -26,6 +31,7 @@ public class Student_Adapter extends RecyclerView.Adapter<Student_Adapter.Studen
     ArrayList<StudentModel>students;
     DatabaseReference databaseReference ;
     Listener listener;
+   StudentsFragment listeners = new StudentsFragment();
 
 
     public Student_Adapter(Context context, ArrayList<StudentModel> students,Listener listener) {
@@ -69,6 +75,13 @@ public class Student_Adapter extends RecyclerView.Adapter<Student_Adapter.Studen
             public void onClick(View view) {
 
                 listener.onClick(holder.getAdapterPosition());
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                 listener.onItemClick(holder.getLayoutPosition());
             }
         });
 
@@ -197,6 +210,7 @@ public class Student_Adapter extends RecyclerView.Adapter<Student_Adapter.Studen
 
     public interface Listener {
        void onClick(int position);
+       void onItemClick(int position);
     }
 
 

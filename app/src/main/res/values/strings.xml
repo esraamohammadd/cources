@@ -33,6 +33,16 @@
     <string name="type">type message</string>
     <string name="incorrectLink">link is incorrect</string>
     <string name="errorusename">user name is incorrect</string>
+    <string name="exam">exam</string>
+    <string name="send">send</string>
+    <array name="answer">
+        <item>correct answer</item>
+        <item>option1</item>
+        <item>option2</item>
+        <item>option3</item>
+        <item>option4</item>
+
+    </array>
 
 
 </resources>

@@ -1,26 +1,22 @@
-package com.example.cources.ui.admin;
+package com.example.cources.student.ui;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.cources.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link ChatFragmentt#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class ChatFragmentt extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,8 +26,9 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    TextView tv;
 
-    public HomeFragment() {
+    public ChatFragmentt() {
         // Required empty public constructor
     }
 
@@ -41,11 +38,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment ChatFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static ChatFragmentt newInstance(String param1, String param2) {
+        ChatFragmentt fragment = new ChatFragmentt();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,34 +58,14 @@ public class HomeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    Button addExam;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
-              View view =  inflater.inflate(R.layout.fragment_home, container, false);
-
-      addExam = (Button)view.findViewById(R.id.button);
-      addExam.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              replaceFragment(ExamFragment.newInstance(mParam1,null));
-          }
-      });
-              return view;
-    }
-
-    private void replaceFragment(Fragment fragment) {
-
-        FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frame_sub_content,fragment);
-        transaction.commit();
-
-
-
+        View view= inflater.inflate(R.layout.fragment_chat2, container, false);
+        tv = view.findViewById(R.id.chat_tv);
+       tv.setText(mParam1);
+        return view;
     }
 }

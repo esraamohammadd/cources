@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cources.R;
-import com.example.cources.interfaces.Listener;
+import com.example.cources.interfaces.Listeners;
 
 import java.util.ArrayList;
 
@@ -19,11 +19,11 @@ public class Video_Adapter extends RecyclerView.Adapter<Video_Adapter.Video_View
 
     Context context;
     ArrayList<String>videos;
-    Listener listener;
+    Listeners listener;
 
 
 
-    public Video_Adapter(Context context, ArrayList<String> videos, Listener listener) {
+    public Video_Adapter(Context context, ArrayList<String> videos, Listeners listener) {
         this.context = context;
         this.videos = videos;
         this.listener = listener;

@@ -31,5 +31,15 @@
     <string name="type">اكتب رسالة </string>
     <string name="incorrectLink">هذا الرابط غير صحيح </string>
     <string name="errorusename">اسم المستخدم خاطئ</string>
+    <string name="exam">امتحان</string>
+    <string name="send">ارسال</string>
+    <array name="answer">
+        <item>الاجابة الصحيحة</item>
+        <item>الاختيار 1</item>
+        <item>الاختيار2</item>
+        <item>الاختيار3</item>
+        <item>الاختيار4</item>
+
+    </array>
 
 </resources>

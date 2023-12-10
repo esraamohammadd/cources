@@ -1,5 +1,6 @@
 package com.example.cources.ui.admin;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,10 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cources.R;
 import com.example.cources.adapter.Student_Adapter;
+import com.example.cources.classes.Student_Level;
+import com.example.cources.interfaces.Listeners;
+import com.example.cources.pojo.StudentLevel;
 import com.example.cources.pojo.StudentModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
@@ -27,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 
-public class StudentsFragment extends Fragment {
+public class StudentsFragment extends Fragment  {
 
     public static final String ARG_USERNAME = "userName";
     public static final String ARG_SUBJECT = "subject";
@@ -85,6 +89,14 @@ public class StudentsFragment extends Fragment {
                intent.putExtra(ARG_USERNAME,studentModels.get(position).getUserName());
                getActivity().startActivity(intent);
            }
+
+           @Override
+           public void onItemClick(int position) {
+               Intent intent = new Intent(getActivity(),Student_Level.class);
+               intent.putExtra(ARG_SUBJECT,studentModels.get(position).getSubject());
+               intent.putExtra(ARG_USERNAME,studentModels.get(position).getUserName());
+               getActivity().startActivity(intent);
+           }
        });
                recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -136,4 +148,7 @@ public class StudentsFragment extends Fragment {
             }
         });
     }
+
+
+
 }

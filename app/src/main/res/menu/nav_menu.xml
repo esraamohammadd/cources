@@ -17,6 +17,7 @@
         android:id="@+id/chat"
         android:icon="@drawable/chat"
         android:title="@string/chat" />
+
     <item
         android:id="@+id/logout"
         android:icon="@android:drawable/ic_lock_power_off"

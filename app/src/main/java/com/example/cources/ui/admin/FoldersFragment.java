@@ -9,13 +9,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cources.R;
 import com.example.cources.adapter.Folder_Adapter;
-import com.example.cources.interfaces.Listener;
+import com.example.cources.interfaces.Listeners;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -78,7 +79,7 @@ public class FoldersFragment extends Fragment {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 folders.add(snapshot.getKey());
 
-                folder_adapter = new Folder_Adapter(getActivity(), folders, new Listener() {
+                folder_adapter = new Folder_Adapter(getActivity(), folders, new Listeners() {
                     @Override
                     public void onClick(int position) {
                         Intent intent = new Intent(getActivity(),SubjectContent.class);
@@ -125,4 +126,8 @@ public class FoldersFragment extends Fragment {
 
 
     }
+
+
+
+
 }

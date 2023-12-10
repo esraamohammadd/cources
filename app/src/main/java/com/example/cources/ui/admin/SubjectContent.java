@@ -50,6 +50,9 @@ public class SubjectContent extends AppCompatActivity {
                    case R.id.documents:
                        replaceFragment(DocumentsFragment.newInstance(name,null));
                              break;
+                   case R.id.exam:
+                       replaceFragment(HomeFragment.newInstance(name,null));
+                       break;
 
                }
 

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animationCache="true"
+
+    android:autofillHints="hgjjjjj"
+    android:background="#379EB89F"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    tools:context=".ui.admin.ExamFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:contextClickable="true"
+        android:orientation="vertical">
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/chat_shape_send"
+            android:gravity="center"
+            android:hint=" enter question"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+
+        <EditText
+            android:id="@+id/et_option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/et_shape"
+            android:gravity="center"
+            android:hint="option 1"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/et_shape"
+            android:gravity="center"
+            android:hint="option 2"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/et_shape"
+            android:gravity="center"
+            android:hint="option 3"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/et_shape"
+            android:gravity="center"
+            android:hint="option 4"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/sp_correctAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:dropDownWidth="wrap_content"
+                android:elevation="5dp"
+                android:entries="@array/answer"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/et_score"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circle_img"
+                android:gravity="center"
+                android:hint="score"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_exam_save"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:contextClickable="true"
+            android:text="@string/save"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/send_exam"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:contextClickable="true"
+            android:text="@string/send"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

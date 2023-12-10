@@ -17,4 +17,9 @@
         android:icon="@drawable/chat"
         android:title="@string/chat"
         app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/exam"
+        android:icon="@drawable/exam"
+        android:title="@string/exam" />
 </menu>

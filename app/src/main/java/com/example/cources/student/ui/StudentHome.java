@@ -6,15 +6,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
 
 import com.example.cources.R;
-import com.example.cources.ui.admin.ChatsFragment;
 import com.example.cources.ui.admin.DocumentsFragment;
-import com.example.cources.ui.admin.FoldersFragment;
 import com.example.cources.ui.admin.VideoesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -22,6 +20,8 @@ import com.google.android.material.navigation.NavigationBarView;
 public class StudentHome extends AppCompatActivity {
 
     private String username,name,subject,phone;
+       SharedPreferences sharedPreferences ;
+       SharedPreferences.Editor editor;
 
   BottomNavigationView bottomNavigationView;
     @Override
@@ -30,13 +30,17 @@ public class StudentHome extends AppCompatActivity {
         setContentView(R.layout.activity_student_home);
         bottomNavigationView = findViewById(R.id.bottom_nav);
 
-        Intent intent = getIntent();
-        if (intent != null)
+        sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+
+        if (sharedPreferences.contains("password"))
         {
-            name = intent.getStringExtra(MainActivity.ARG_NAME);
-            username = intent.getStringExtra(MainActivity.ARG_USERNAME);
-            subject = intent.getStringExtra(MainActivity.ARG_SUBJECT);
-            phone = intent.getStringExtra(MainActivity.ARG_PHONE);
+            name = sharedPreferences.getString("name","");
+
+            username =  sharedPreferences.getString("userName","");
+            subject =  sharedPreferences.getString("subject","");
+            phone =  sharedPreferences.getString("phone","");
 
 
         }
@@ -52,13 +56,13 @@ public class StudentHome extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.chats  :
-                        replaceFragment(ChatsFragment.newInstance(name,null));
+                        replaceFragment(ChatFragmentt.newInstance(name,null));
                         break;
                     case R.id.videoes  :
                         replaceFragment(VideoesFragment.newInstance(name,null));
                         break;
                     case R.id.documents:
-                        replaceFragment(DocumentsFragment.newInstance(name,null));
+                        replaceFragment(DocumentsFragment.newInstance(subject,null));
                         break;
 
                 }

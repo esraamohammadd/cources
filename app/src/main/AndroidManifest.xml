@@ -12,18 +12,21 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/iconproject"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cources"
         tools:targetApi="31">
         <activity
-            android:name=".student.ui.StudentHome"
+            android:name=".classes.Student_Level"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".student.VideosActivity"
+            android:name=".student.ui.StudentHome"
             android:exported="true"></activity>
+        <activity
+            android:name=".student.VideosActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.ShowVideo"
             android:exported="false"
@@ -42,7 +45,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.admin.Home"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ui.admin.students"
             android:exported="false" />

@@ -7,13 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.tv.TvContentRating;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.cources.R;
-import com.example.cources.interfaces.Listener;
+import com.example.cources.interfaces.Listeners;
 import com.example.cources.student.adapter.Video_Adapter;
 import com.example.cources.student.ui.MainActivity;
 import com.example.cources.ui.ShowVideo;
@@ -83,7 +81,7 @@ Video_Adapter video_adapter;
         });
 
 
-      video_adapter = new Video_Adapter(this, videosNames, new Listener() {
+      video_adapter = new Video_Adapter(this, videosNames, new Listeners() {
           @Override
           public void onClick(int position) {
               // get link of video

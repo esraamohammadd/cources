@@ -48,7 +48,7 @@ public class Document_Adapter extends RecyclerView.Adapter<Document_Adapter.Docu
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  listener.onClick(holder.getAdapterPosition());
+                  listener.onIteemClick(holder.getAdapterPosition());
             }
         });
 
@@ -80,6 +80,7 @@ public class Document_Adapter extends RecyclerView.Adapter<Document_Adapter.Docu
 
     public interface Listener {
         void onClick(int possition);
+        void onIteemClick(int position);
 }
 
 
