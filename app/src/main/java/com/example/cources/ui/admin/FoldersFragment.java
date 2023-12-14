@@ -30,7 +30,7 @@ public class FoldersFragment extends Fragment {
 
     RecyclerView recyclerView;
     FloatingActionButton btn_add;
-    ArrayList<String> folders;
+    ArrayList<String> folders = new ArrayList<>();
     DatabaseReference databaseReference;
     Folder_Adapter folder_adapter;
     public static final String NAME = "name";
@@ -65,29 +65,37 @@ public class FoldersFragment extends Fragment {
        databaseReference = FirebaseDatabase.getInstance().getReference();
 
        btn_add = view.findViewById(R.id.fbtn_addFolder);
+       recyclerView = view.findViewById(R.id.rec_folder);
+       getFolders();
+        folder_adapter = new Folder_Adapter(getActivity(), folders, new Listeners() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(getActivity(),SubjectContent.class);
+                intent.putExtra(NAME,folders.get(position));
+                startActivity(intent);
+            }
+        });
+        recyclerView.setAdapter(folder_adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-       btn_add.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               startActivity(new Intent(getActivity(),AddFolder.class));
-           }
-       });
-        recyclerView = view.findViewById(R.id.rec_folder);
-        folders = new ArrayList<>();
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),AddFolder.class));
+            }
+        });
+
+        return view;
+
+
+
+    }
+
+    private void getFolders() {
         databaseReference.child("folders").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 folders.add(snapshot.getKey());
-
-                folder_adapter = new Folder_Adapter(getActivity(), folders, new Listeners() {
-                    @Override
-                    public void onClick(int position) {
-                        Intent intent = new Intent(getActivity(),SubjectContent.class);
-                        intent.putExtra(NAME,folders.get(position));
-                        startActivity(intent);
-                    }
-                });
-                        recyclerView.setAdapter(folder_adapter);
                 folder_adapter.notifyDataSetChanged();
             }
 
@@ -112,22 +120,7 @@ public class FoldersFragment extends Fragment {
             }
         });
 
-
-
-
-
-
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(folder_adapter);
-
-        return view;
-
-
-
     }
-
-
 
 
 }

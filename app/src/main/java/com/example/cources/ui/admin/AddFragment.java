@@ -32,9 +32,9 @@ import com.google.firebase.database.ValueEventListener;
  */
 public class AddFragment extends DialogFragment {
 
-    EditText et_code,et_name,et_link;
+    EditText et_name,et_link;
     Button btn_upload;
-    String code,name,link;
+    String name,link;
     DatabaseReference databaseReference;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -82,7 +82,6 @@ public class AddFragment extends DialogFragment {
         View view =  inflater.inflate(R.layout.fragment_add, container, false);
 
        databaseReference = FirebaseDatabase.getInstance().getReference().child("folders").child(msubjectName).child("videos");
-        et_code = view.findViewById(R.id.et_code);
         et_name = view.findViewById(R.id.et_name);
         et_link = view.findViewById(R.id.et_link);
          btn_upload = view.findViewById(R.id.btn_upload);
@@ -90,11 +89,10 @@ public class AddFragment extends DialogFragment {
              @Override
              public void onClick(View view) {
 
-                 code = et_code.getText().toString();
                  name = et_name.getText().toString();
                  link = et_link.getText().toString();
 
-                 if (!(code.isEmpty()||name.isEmpty()||link.isEmpty()))
+                 if (!(name.isEmpty()||link.isEmpty()))
                  {
                      databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                          @Override
@@ -102,9 +100,6 @@ public class AddFragment extends DialogFragment {
                              if (snapshot.hasChild(name))
                              {
                                  Toast.makeText(getActivity(), R.string.existstudent, Toast.LENGTH_SHORT).show();
-                             }else if(!(link.contains("v="))){
-                                 Toast.makeText(getActivity(), R.string.incorrectLink, Toast.LENGTH_SHORT).show();
-
                              }else
                              {addvideo();
 
@@ -134,7 +129,7 @@ public class AddFragment extends DialogFragment {
 
     private void addvideo() {
 
-        VideoModel videoModel = new VideoModel(name,code,link);
+        VideoModel videoModel = new VideoModel(name,link);
 
         databaseReference.child(name).setValue(videoModel).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -142,7 +137,7 @@ public class AddFragment extends DialogFragment {
                 Toast.makeText(getActivity(), R.string.success, Toast.LENGTH_SHORT).show();
                 et_name.setText("");
                 et_link.setText("");
-                et_code.setText("");
+
 
             }
         }).addOnFailureListener(new OnFailureListener() {

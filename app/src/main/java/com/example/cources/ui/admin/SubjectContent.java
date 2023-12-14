@@ -18,7 +18,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class SubjectContent extends AppCompatActivity {
     TextView tv_name;
     BottomNavigationView bottomNavigationView;
-
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,10 @@ public class SubjectContent extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-       String name = intent.getStringExtra(FoldersFragment.NAME);
+        if (intent != null) {
+            name = intent.getStringExtra(FoldersFragment.NAME);
+        }
+
        tv_name.setText(name);
         replaceFragment(DocumentsFragment.newInstance(name,null));
 
@@ -51,7 +54,7 @@ public class SubjectContent extends AppCompatActivity {
                        replaceFragment(DocumentsFragment.newInstance(name,null));
                              break;
                    case R.id.exam:
-                       replaceFragment(HomeFragment.newInstance(name,null));
+                       replaceFragment(ExamsFragment.newInstance(name,null));
                        break;
 
                }

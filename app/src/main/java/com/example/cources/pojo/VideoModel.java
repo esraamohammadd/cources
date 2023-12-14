@@ -6,13 +6,12 @@ public class VideoModel {
     private String code;
     private String link;
 
-
     public VideoModel() {
     }
 
-    public VideoModel(String name, String code, String link) {
+
+    public VideoModel(String name, String link) {
         this.name = name;
-        this.code = code;
         this.link = link;
     }
 

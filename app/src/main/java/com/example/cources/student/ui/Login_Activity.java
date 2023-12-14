@@ -1,8 +1,6 @@
 package com.example.cources.student.ui;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,16 +12,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.cources.R;
-import com.example.cources.pojo.StudentModel;
-import com.example.cources.student.VideosActivity;
 import com.example.cources.ui.admin.Home;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class Login_Activity extends AppCompatActivity {
 
     public static final String  ARG_USERNAME = "userName";
     public static final String  ARG_SUBJECT = "subject";
@@ -57,7 +50,11 @@ public class MainActivity extends AppCompatActivity {
                  userName = sharedPreferences.getString("userName", "default");
                  password = sharedPreferences.getString("password", "de");
                  if (userName.equals("teacher".trim()) && password.equals("123".trim())) {
-                     startActivity(new Intent(MainActivity.this, Home.class));
+                     Intent intent = new Intent(Login_Activity.this, Home.class);
+                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                     startActivity(intent);
+                     finish();
+
 
                  }
              }
@@ -75,10 +72,13 @@ public class MainActivity extends AppCompatActivity {
                       editor.putString("userName","teacher");
                       editor.putString("password","123");
                       editor.apply();
-                      startActivity(new Intent(MainActivity.this,Home.class));
+                      Intent intent = new Intent(Login_Activity.this, Home.class);
+                      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                      startActivity(intent);
+                      finish();
                   }else
                   {
-                      Toast.makeText(MainActivity.this, "error login ", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(Login_Activity.this, "error login ", Toast.LENGTH_SHORT).show();
                   }
               }
               else {

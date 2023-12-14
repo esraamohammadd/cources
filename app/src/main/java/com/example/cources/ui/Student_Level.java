@@ -1,4 +1,4 @@
-package com.example.cources.classes;
+package com.example.cources.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

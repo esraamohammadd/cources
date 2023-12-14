@@ -33,6 +33,7 @@
     <string name="errorusename">اسم المستخدم خاطئ</string>
     <string name="exam">امتحان</string>
     <string name="send">ارسال</string>
+    <string name="about">أهلاً بك في تطبيق كورسات هنا يمكنك رفع الملفات والفيديوهات الخاصة بك الى طلابك وكذلك يمكنك انشاء امتحانات وتصحيحها الكترونياً كما يمنك التواصل مع طلابك عن طريق دردشة جماعية مع نفس طلاب الصف</string>
     <array name="answer">
         <item>الاجابة الصحيحة</item>
         <item>الاختيار 1</item>

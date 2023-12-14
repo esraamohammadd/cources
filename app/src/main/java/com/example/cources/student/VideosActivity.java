@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.cources.R;
 import com.example.cources.interfaces.Listeners;
 import com.example.cources.student.adapter.Video_Adapter;
-import com.example.cources.student.ui.MainActivity;
+import com.example.cources.student.ui.Login_Activity;
 import com.example.cources.ui.ShowVideo;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -42,10 +42,10 @@ Video_Adapter video_adapter;
         Intent intent = getIntent();
         if (intent != null)
         {
-            name = intent.getStringExtra(MainActivity.ARG_NAME);
-            username = intent.getStringExtra(MainActivity.ARG_USERNAME);
-            subject = intent.getStringExtra(MainActivity.ARG_SUBJECT);
-            phone = intent.getStringExtra(MainActivity.ARG_PHONE);
+            name = intent.getStringExtra(Login_Activity.ARG_NAME);
+            username = intent.getStringExtra(Login_Activity.ARG_USERNAME);
+            subject = intent.getStringExtra(Login_Activity.ARG_SUBJECT);
+            phone = intent.getStringExtra(Login_Activity.ARG_PHONE);
 
         }
         tv_name.setText("أهلاً  "+name);

@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Cources"
         tools:targetApi="31">
         <activity
-            android:name=".classes.Student_Level"
+            android:name=".ui.Student_Level"
             android:exported="true">
 
         </activity>
@@ -50,7 +50,7 @@
             android:name=".ui.admin.students"
             android:exported="false" />
         <activity
-            android:name=".student.ui.MainActivity"
+            android:name=".student.ui.Login_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -12,7 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.cources.student.ui.MainActivity;
+import com.example.cources.student.ui.Login_Activity;
 import com.example.cources.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -55,13 +55,9 @@ public class Home extends AppCompatActivity {
                         replaceFragment(new FoldersFragment());
                         drawerLayout.close();
                         break;
-                    case R.id.chat:
-                        replaceFragment(new ChatFragment());
-                        drawerLayout.close();
-                        break;
 
                     case R.id.logout:
-                        startActivity(new Intent(Home.this, MainActivity.class));
+                        startActivity(new Intent(Home.this, Login_Activity.class));
                         drawerLayout.close();
                         break;
 

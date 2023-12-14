@@ -71,13 +71,7 @@ public class HomeFragment extends Fragment {
 
               View view =  inflater.inflate(R.layout.fragment_home, container, false);
 
-      addExam = (Button)view.findViewById(R.id.button);
-      addExam.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              replaceFragment(ExamFragment.newInstance(mParam1,null));
-          }
-      });
+
               return view;
     }
 

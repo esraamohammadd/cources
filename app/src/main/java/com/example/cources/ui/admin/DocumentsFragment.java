@@ -1,6 +1,5 @@
 package com.example.cources.ui.admin;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +10,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AlertDialogLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,13 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.cources.R;
 import com.example.cources.adapter.Document_Adapter;
-import com.example.cources.classes.Student_Level;
 import com.example.cources.pojo.DocumentModel;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -38,7 +34,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -118,21 +113,18 @@ public class DocumentsFragment extends Fragment {
             @Override
             public void onClick(int possition) {
 
-
-                // show file at possition
-                String uri = documentModels.get(possition).getLink();
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.parse(uri),"application/pdf");
-                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                startActivity(intent);
-
-
             }
 
              @Override
              public void onIteemClick(int position) {
-                 startActivity(new Intent(getActivity(), Student_Level.class));
+
+                 // show file at possition
+                 String uri = documentModels.get(position).getLink();
+                 Intent intent = new Intent();
+                 intent.setAction(Intent.ACTION_VIEW);
+                 intent.setDataAndType(Uri.parse(uri),"application/pdf");
+                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                 startActivity(intent);
              }
          });
        recyclerView.setAdapter(document_adapter);

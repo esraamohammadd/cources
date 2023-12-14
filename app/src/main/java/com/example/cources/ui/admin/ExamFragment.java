@@ -120,7 +120,7 @@ public class ExamFragment extends Fragment {
               @Override
               public void onClick(View v) {
                   Toast.makeText(getActivity(), R.string.success, Toast.LENGTH_SHORT).show();
-                  replaceFragment(HomeFragment.newInstance(mParam1,null));
+                  replaceFragment(ExamsFragment.newInstance(mParam1,null));
               }
           });
 
@@ -130,7 +130,7 @@ public class ExamFragment extends Fragment {
 
     private void replaceFragment(Fragment fragment) {
 
-        FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
+        FragmentManager fragmentManager =getParentFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frame_sub_content,fragment);
         transaction.commit();

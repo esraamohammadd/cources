@@ -1,6 +1,5 @@
 package com.example.cources.ui.admin;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,13 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.cources.R;
 import com.example.cources.adapter.Student_Adapter;
-import com.example.cources.classes.Student_Level;
-import com.example.cources.interfaces.Listeners;
-import com.example.cources.pojo.StudentLevel;
+import com.example.cources.ui.Student_Level;
 import com.example.cources.pojo.StudentModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;

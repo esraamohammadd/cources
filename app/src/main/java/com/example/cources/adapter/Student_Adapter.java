@@ -1,7 +1,6 @@
 package com.example.cources.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cources.R;
-import com.example.cources.classes.Student_Level;
-import com.example.cources.interfaces.Listeners;
-import com.example.cources.pojo.StudentLevel;
 import com.example.cources.pojo.StudentModel;
 import com.example.cources.ui.admin.StudentsFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
