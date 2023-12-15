@@ -1,5 +1,6 @@
 package com.example.cources.ui.admin;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -97,6 +98,7 @@ public class DocumentsFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -132,7 +134,7 @@ public class DocumentsFragment extends Fragment {
 
       // add file
         addFile = view.findViewById(R.id.btn_addDocument);
-        etName = view.findViewById(R.id.etName);
+        etName = view.findViewById(R.id.et_file_name);
         addFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

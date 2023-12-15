@@ -14,7 +14,7 @@ import com.example.cources.R;
 import com.example.cources.interfaces.Listeners;
 import com.example.cources.student.adapter.Video_Adapter;
 import com.example.cources.student.ui.Login_Activity;
-import com.example.cources.ui.ShowVideo;
+import com.example.cources.ui.ShowYuoTubeVideo;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,7 +35,7 @@ Video_Adapter video_adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_videos);
+        setContentView(R.layout.activity_videos_youtube);
         recyclerView= findViewById(R.id.rec_videos);
         tv_name = findViewById(R.id.name_st);
 
@@ -90,7 +90,7 @@ Video_Adapter video_adapter;
                   public void onDataChange(@NonNull DataSnapshot snapshot) {
                       String link = snapshot.child("link").getValue(String.class);
                      // Toast.makeText(VideosActivity.this, link, Toast.LENGTH_SHORT).show();
-                      Intent intent = new Intent(VideosActivity.this, ShowVideo.class);
+                      Intent intent = new Intent(VideosActivity.this, ShowYuoTubeVideo.class);
                       intent.putExtra(ARG_LINK,link);
                       startActivity(intent);
                   }

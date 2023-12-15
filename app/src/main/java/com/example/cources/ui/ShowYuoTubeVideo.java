@@ -4,26 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.MediaController;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.example.cources.R;
-import com.example.cources.student.VideosActivity;
-import com.example.cources.ui.admin.VideoesFragment;
-import com.google.firebase.database.DatabaseReference;
+import com.example.cources.ui.admin.VideoesYouTubeFragment;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-public class ShowVideo extends AppCompatActivity {
+public class ShowYuoTubeVideo extends AppCompatActivity {
 
 
      //
@@ -48,8 +39,8 @@ public class ShowVideo extends AppCompatActivity {
 
         if(intent != null) {
 
-           // String videoLink = intent.getStringExtra(VideoesFragment.ARG_VIDE_LINK);
-            String videoLink = intent.getStringExtra(VideoesFragment.ARG_VIDE_LINK);
+           // String videoLink = intent.getStringExtra(VideoesYouTubeFragment.ARG_VIDE_LINK);
+            String videoLink = intent.getStringExtra(VideoesYouTubeFragment.ARG_VIDE_LINK);
 
            diplayVideo(videoLink);
 

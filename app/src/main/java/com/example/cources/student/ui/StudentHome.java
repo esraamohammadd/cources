@@ -13,7 +13,7 @@ import android.view.MenuItem;
 
 import com.example.cources.R;
 import com.example.cources.ui.admin.DocumentsFragment;
-import com.example.cources.ui.admin.VideoesFragment;
+import com.example.cources.ui.admin.VideoesYouTubeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -59,7 +59,7 @@ public class StudentHome extends AppCompatActivity {
                         replaceFragment(ChatFragmentt.newInstance(name,null));
                         break;
                     case R.id.videoes  :
-                        replaceFragment(VideoesFragment.newInstance(name,null));
+                        replaceFragment(VideoesYouTubeFragment.newInstance(name,null));
                         break;
                     case R.id.documents:
                         replaceFragment(DocumentsFragment.newInstance(subject,null));

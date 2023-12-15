@@ -1,6 +1,5 @@
 package com.example.cources.ui.admin;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.cources.R;
 import com.example.cources.pojo.VideoModel;
-import com.example.cources.ui.ShowVideo;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,10 +25,10 @@ import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AddFragment#newInstance} factory method to
+ * Use the {@link AddVideoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddFragment extends DialogFragment {
+public class AddVideoFragment extends DialogFragment {
 
     EditText et_name,et_link;
     Button btn_upload;
@@ -46,7 +44,7 @@ public class AddFragment extends DialogFragment {
     private String msubjectName;
     private String mParam2;
 
-    public AddFragment() {
+    public AddVideoFragment() {
         // Required empty public constructor
     }
 
@@ -55,11 +53,11 @@ public class AddFragment extends DialogFragment {
      * this fragment using the provided parameters.
      *
      * @param subjectName Parameter 1.
-     * @return A new instance of fragment AddFragment.
+     * @return A new instance of fragment AddVideoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AddFragment newInstance(String subjectName) {
-        AddFragment fragment = new AddFragment();
+    public static AddVideoFragment newInstance(String subjectName) {
+        AddVideoFragment fragment = new AddVideoFragment();
         Bundle args = new Bundle();
        args.putString(ARG_SUBJECT, subjectName);
         fragment.setArguments(args);

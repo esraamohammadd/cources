@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.admin.VideoesFragment">
+    tools:context=".ui.admin.VideoesYouTubeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
@@ -10,10 +10,11 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rec_video"
+            android:id="@+id/rec_videos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/btn_addvideo"
+            android:layout_marginBottom="-66dp"
             android:gravity="center"
             android:textSize="30sp" />
 
@@ -23,11 +24,35 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="17dp"
+            android:layout_marginEnd="22dp"
             android:layout_marginBottom="71dp"
             android:clickable="true"
             android:src="@android:drawable/ic_input_add" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_pick_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="71dp"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@android:drawable/ic_menu_upload" />
 
+        <EditText
+            android:id="@+id/et_videoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/btn_addvideo"
+            android:layout_alignBottom="@id/btn_addvideo"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/btn_addvideo"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:visibility="gone" />
     </RelativeLayout>
 
 
