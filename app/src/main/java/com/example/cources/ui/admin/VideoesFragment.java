@@ -3,6 +3,7 @@ package com.example.cources.ui.admin;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,6 +25,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.cources.R;
@@ -42,6 +44,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -218,6 +221,7 @@ public class VideoesFragment extends Fragment {
     private void uploadVideo(Uri data) {
 
        storageReference.child("uploads/videos/"+videoName).putFile(data).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+           @SuppressLint("SuspiciousIndentation")
            @Override
            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                Uri resultUri = null;
@@ -233,6 +237,12 @@ public class VideoesFragment extends Fragment {
                et_Video_name.setVisibility(View.GONE);
                btn_upload.setVisibility(View.GONE);
            }
+       }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+           @Override
+           public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+               ProgressBar progressBar = new ProgressBar(getActivity());
+               progressBar.buildLayer();
+        }
        });
 
 

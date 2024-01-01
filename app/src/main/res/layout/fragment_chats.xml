@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@color/background">
 
 
     <RelativeLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8DAFAD">
+        android:background="@color/border">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profilePic"
@@ -20,7 +20,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/circle_img"
             android:src="@drawable/person" />
 
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="23dp"
             android:layout_toRightOf="@+id/profilePic"
             android:maxLines="1"
             android:text="Esraa Mohammad"
@@ -47,7 +47,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomBar"
         android:layout_below="@+id/topBar"
-        android:background="#F2F8F3" />
+        android:background="@color/background" />
 
     <RelativeLayout
         android:id="@+id/bottomBar"
@@ -71,17 +71,16 @@
             android:paddingEnd="20dp"
             android:textSize="18sp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/sendBtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="70dp"
-            android:background="@color/white"
             android:clickable="true"
-            android:src="@drawable/send" />
+            android:background="@color/background"
+            android:src="@drawable/send_img" />
 
 
     </RelativeLayout>

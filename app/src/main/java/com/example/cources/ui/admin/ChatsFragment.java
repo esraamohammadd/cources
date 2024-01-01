@@ -101,6 +101,7 @@ RecyclerView recyclerView;
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
 
+
         // send message
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +121,8 @@ RecyclerView recyclerView;
                                 @Override
                                 public void onSuccess(Void unused) {
                                     et_message.setText("");
+                                    recyclerView.smoothScrollToPosition(chat_adapter.getItemCount()-1);
+
                                 }
                             });
                         }
@@ -146,6 +149,7 @@ RecyclerView recyclerView;
                 ChatModel chatModel = snapshot.getValue(ChatModel.class);
                     chatModels.add(chatModel);
                 chat_adapter.notifyDataSetChanged();
+                recyclerView.smoothScrollToPosition(chat_adapter.getItemCount()-1);
 
 
             }

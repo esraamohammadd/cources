@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.admin.AddStudent">
+    tools:context=".ui.admin.AddStudent"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,8 +35,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@drawable/edit_text"
             android:hint="@string/name"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingStart="15dp" />
 
 
         <EditText
@@ -45,10 +48,12 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@drawable/edit_text"
             android:digits="1234567890"
             android:hint="@string/phoneNo"
             android:inputType="number"
             android:minHeight="48dp"
+            android:paddingStart="15dp"
             android:singleLine="true" />
 
         <EditText
@@ -58,8 +63,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@drawable/edit_text"
             android:hint="@string/subject"
             android:minHeight="48dp"
+            android:paddingStart="15dp"
             android:singleLine="true" />
 
         <EditText
@@ -69,8 +76,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@drawable/edit_text"
             android:hint="@string/user"
             android:minHeight="48dp"
+            android:paddingStart="15dp"
             android:singleLine="true" />
 
 
@@ -84,7 +93,9 @@
             android:layout_weight="1"
             android:hint="@string/password"
             android:minHeight="48dp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:paddingStart="15dp"
+            android:background="@drawable/edit_text"/>
 
         <Button
             android:id="@+id/btn_save"

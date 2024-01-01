@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -24,6 +25,8 @@ public class ShowFireBaseVideo extends AppCompatActivity {
         setContentView(R.layout.activity_show_fire_base_video);
         getSupportActionBar().hide();
 
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         videoView = findViewById(R.id.videoView);
 
         Intent intent = getIntent();
@@ -35,6 +38,8 @@ public class ShowFireBaseVideo extends AppCompatActivity {
 
         videoView.setVideoURI(Uri.parse(link));
         videoView.setMediaController(mediaController);
+        videoView.canSeekBackward();
+        videoView.suspend();
         videoView.start();
 
 

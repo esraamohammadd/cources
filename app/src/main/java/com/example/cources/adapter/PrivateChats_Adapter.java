@@ -10,24 +10,24 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cources.R;
-import com.example.cources.pojo.ChatModel;
 
 import java.util.ArrayList;
 
 
-public class Chat_Adapter extends RecyclerView.Adapter<Chat_Adapter.Chat_ViewHolder> {
+public class PrivateChats_Adapter extends RecyclerView.Adapter<PrivateChats_Adapter.Chat_ViewHolder> {
 
     Context context;
-    ArrayList<ChatModel>chatModels;
+    ArrayList<String>messages;
+ ArrayList < String> userName;
 
 
 
 
 
-
-    public Chat_Adapter(Context context, ArrayList<ChatModel> chatModels) {
+    public PrivateChats_Adapter(Context context, ArrayList<String> messages, ArrayList<String> userName) {
         this.context = context;
-        this.chatModels = chatModels;
+        this.messages = messages;
+        this.userName = userName;
 
 
     }
@@ -45,10 +45,10 @@ public class Chat_Adapter extends RecyclerView.Adapter<Chat_Adapter.Chat_ViewHol
     public void onBindViewHolder(@NonNull Chat_ViewHolder holder, int position)
     {
         // if userMsg == user >> msg = send.visible
-        holder.msg_send.setText(chatModels.get(position).getMsg());
-        holder.messagereceived.setText(chatModels.get(position).getMsg());
+        holder.msg_send.setText(messages.get(position));
+        holder.messagereceived.setText(messages.get(position));
 
-        if (chatModels.get(position).getUserName().contains("teacher"))
+        if (userName.get(position).contains("teacher"))
         {
 
             holder.messagereceived.setVisibility(View.GONE);
@@ -69,7 +69,7 @@ public class Chat_Adapter extends RecyclerView.Adapter<Chat_Adapter.Chat_ViewHol
 
     @Override
     public int getItemCount() {
-        return chatModels.size();
+        return messages.size();
     }
 
     public class Chat_ViewHolder extends RecyclerView.ViewHolder {

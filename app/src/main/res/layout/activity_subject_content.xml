@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.admin.SubjectContent">
 
     <FrameLayout
@@ -11,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_nav"
-        android:layout_below="@id/nameSub"
-        >
+        android:layout_below="@id/nameSub">
 
 
     </FrameLayout>
@@ -24,7 +24,7 @@
         android:gravity="center_horizontal"
 
         android:text="Arabic "
-        android:textColor="#8DAFAD"
+        android:textColor="@color/text"
         android:textSize="30sp" />
 
 
@@ -35,6 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:defaultFocusHighlightEnabled="true"
+        app:itemRippleColor="@color/text"
+        app:itemTextColor="@color/text"
         app:menu="@menu/bottmo_nav" />
 
 </RelativeLayout>

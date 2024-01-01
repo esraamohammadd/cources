@@ -21,6 +21,13 @@ public class StudentModel {
         this.password = password;
     }
 
+    public StudentModel(String name, String phone, String userName) {
+
+        this.name = name;
+        this.phone_no = phone;
+        this.userName = userName;
+    }
+
     public String getPhone_no() {
         return phone_no;
     }

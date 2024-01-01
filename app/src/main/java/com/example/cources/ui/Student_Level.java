@@ -49,9 +49,16 @@ double percent ,score;
         databaseReference.child("students_level").child(userName).child("progress").child("percent").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-              percent =  snapshot.getValue(Double.class);
-                progressBar.setProgress((int) percent);
-                tv_percent.setText("%"+(int)percent);
+                if (snapshot.getValue() != null) {
+                    percent = snapshot.getValue(Double.class);
+                    progressBar.setProgress((int) percent);
+                    tv_percent.setText("%" + (int) percent);
+                }else
+                {
+                    progressBar.setProgress((0));
+                    tv_percent.setText("%" + 0);
+                }
+
             }
 
             @Override
@@ -66,9 +73,14 @@ double percent ,score;
         databaseReference.child("students_level").child(userName).child("score").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                 score = snapshot.getValue(Double.class);
+              if (snapshot.getValue() != null) {
 
-                tv_score.setText(""+"درجة الامتحان  "+score);
+                  score = snapshot.getValue(Double.class);
+                  tv_score.setText("" + "درجة الامتحان  " + score);
+              }else {
+                  tv_score.setText("" + "درجة الامتحان  " + "  غ  ");
+              }
+
             }
 
             @Override

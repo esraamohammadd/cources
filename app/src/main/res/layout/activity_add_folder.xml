@@ -4,26 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.admin.AddFolder">
+    tools:context=".ui.admin.AddFolder"
+    android:background="@color/background">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img_1"
+        android:layout_marginBottom="15dp"/>
 
     <EditText
         android:id="@+id/et_folderName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/et_shape"
         android:ems="10"
         android:gravity="center"
         android:hint="folderName"
+        android:padding="6dp"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/et_folder_payment_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/et_shape"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="payment phone"
+        android:padding="6dp"
         android:inputType="textPersonName" />
 
     <Button
@@ -33,5 +47,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="save" />
+        android:text="save"
+       />
 </LinearLayout>

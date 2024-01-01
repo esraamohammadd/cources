@@ -6,7 +6,7 @@
     android:animationCache="true"
 
     android:autofillHints="hgjjjjj"
-    android:background="#379EB89F"
+    android:background="@color/background"
     android:paddingStart="15dp"
     android:paddingEnd="15dp"
     tools:context=".ui.admin.ExamFragment">
@@ -25,10 +25,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:background="@drawable/chat_shape_send"
+            android:background="@color/border"
+            android:fadeScrollbars="true"
             android:gravity="center"
             android:hint=" enter question"
             android:padding="10dp"
+            android:textColorHint="@color/white"
             android:textSize="20sp" />
 
 
@@ -43,6 +45,7 @@
             android:gravity="center"
             android:hint="option 1"
             android:padding="10dp"
+            android:textColorHint="@color/text"
             android:textSize="20sp" />
 
         <EditText
@@ -56,6 +59,7 @@
             android:gravity="center"
             android:hint="option 2"
             android:padding="10dp"
+            android:textColorHint="@color/text"
             android:textSize="20sp" />
 
         <EditText
@@ -69,6 +73,7 @@
             android:gravity="center"
             android:hint="option 3"
             android:padding="10dp"
+            android:textColorHint="@color/text"
             android:textSize="20sp" />
 
         <EditText
@@ -82,6 +87,7 @@
             android:gravity="center"
             android:hint="option 4"
             android:padding="10dp"
+            android:textColorHint="@color/text"
             android:textSize="20sp" />
 
 
@@ -110,7 +116,8 @@
                 android:background="@drawable/circle_img"
                 android:gravity="center"
                 android:hint="score"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/text" />
         </LinearLayout>
 
         <Button

@@ -3,6 +3,7 @@ package com.example.cources.ui.admin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.cources.R;
@@ -28,10 +30,13 @@ import java.util.UUID;
 public class AddFolder extends AppCompatActivity {
 
     EditText et_name;
+    EditText et_payment_phone;
     Button btn_save;
-    ImageButton back;
+    ImageView back;
     String name;
+    String payment_phone;
     DatabaseReference reference ;
+    @SuppressLint({"MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,7 @@ public class AddFolder extends AppCompatActivity {
 
         back = findViewById(R.id.btn_back);
         et_name = findViewById(R.id.et_folderName);
+        et_payment_phone = findViewById(R.id.et_folder_payment_phone);
         btn_save = findViewById(R.id.btn_saveFolder);
 
         reference = FirebaseDatabase.getInstance().getReference();
@@ -46,7 +52,9 @@ public class AddFolder extends AppCompatActivity {
         btn_save.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 name = et_name.getText().toString();
+                 name = et_name.getText().toString().trim();
+                 payment_phone = et_payment_phone.getText().toString().trim();
+
                  // add name to firebase
                  reference.child("folders").addListenerForSingleValueEvent(new ValueEventListener() {
                      @Override
@@ -116,8 +124,14 @@ public class AddFolder extends AppCompatActivity {
 
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(AddFolder.this, R.string.success, Toast.LENGTH_SHORT).show();
-                et_name.setText("");
+                reference.child("folders").child(name).child("phone").setValue(payment_phone).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(AddFolder.this, R.string.success, Toast.LENGTH_SHORT).show();
+                        et_name.setText("");
+                    }
+                });
+
 
             }
         }).addOnFailureListener(new OnFailureListener() {

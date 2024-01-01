@@ -13,6 +13,10 @@
         android:id="@+id/folders"
         android:icon="@drawable/folder"
         android:title="@string/folders" />
+    <item
+        android:id="@+id/private_chat"
+        android:icon="@drawable/chat"
+        android:title="@string/private_chat" />
 
     <item
         android:id="@+id/logout"

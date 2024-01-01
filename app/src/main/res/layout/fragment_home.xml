@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:fitsSystemWindows="true"
     tools:context=".ui.admin.HomeFragment">
 
@@ -16,10 +17,10 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello "
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:textSize="24sp"/>
+            android:text="Hello "
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -35,9 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:background="@color/background"
             android:fontFamily="sans-serif-condensed"
             android:padding="15dp"
-            android:text="@string/about"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="18sp"

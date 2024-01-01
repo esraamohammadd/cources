@@ -37,6 +37,7 @@
     <string name="ok">حسناً</string>
     <string name="confirmSend">Are you need to upload this video</string>
     <string name="cancel">cancel</string>
+    <string name="private_chat">دردشات</string>
     <array name="answer">
         <item>الاجابة الصحيحة</item>
         <item>الاختيار 1</item>

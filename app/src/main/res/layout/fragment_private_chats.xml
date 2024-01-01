@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.admin.PrivateChatsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/private_chattingRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomBar"
+            android:layout_below="@+id/topBar"
+            android:layout_weight="1"
+            android:background="#F2F8F3" />
+
+        <RelativeLayout
+            android:id="@+id/private_bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/private_messageEditTxt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/private_sendBtn"
+                android:background="@drawable/et_shape"
+                android:hint="@string/type"
+                android:inputType="textMultiLine"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/private_sendBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:background="@color/background"
+                android:src="@drawable/send_img" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

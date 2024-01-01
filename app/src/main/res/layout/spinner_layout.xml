@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:checked="false"
         android:clickable="true"
+        android:paddingHorizontal="10dp"
         android:text="CheckBox"
+        android:textColor="@color/text"
         app:useMaterialThemeColors="true" />
 </LinearLayout>

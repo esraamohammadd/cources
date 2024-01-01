@@ -39,6 +39,7 @@
     <string name="ok">ok</string>
     <string name="confirmSend">Are you need to upload this video</string>
     <string name="cancel">cancel</string>
+    <string name="private_chat">private chat</string>
     <array name="answer">
         <item>correct answer</item>
         <item>option1</item>

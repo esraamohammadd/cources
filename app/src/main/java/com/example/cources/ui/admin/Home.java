@@ -55,6 +55,10 @@ public class Home extends AppCompatActivity {
                         replaceFragment(new FoldersFragment());
                         drawerLayout.close();
                         break;
+                    case R.id.private_chat:
+                        replaceFragment(new PrivatChatFragment());
+                        drawerLayout.close();
+                        break;
 
                     case R.id.logout:
                         startActivity(new Intent(Home.this, Login_Activity.class));
